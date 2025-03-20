@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc335762-4d8f-49bd-8ebe-49be7477d64c" name="Changes" comment="" />
+    <list default="true" id="fc335762-4d8f-49bd-8ebe-49be7477d64c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service1/src/main/java/service1/service/MessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service1/src/main/java/service1/service/MessagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service2/src/main/kotlin/service2/service/MessagingService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/service2/src/main/kotlin/service2/service/MessagingService.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +42,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2uYMWgGYwvPZc5lV1mH9KdRUBZZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,6 +54,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "corretto-1.8",
     "last_opened_file_path": "/Users/shahzaibramzan/IdeaProjects/microservice-assignment",
     "onboarding.tips.debug.path": "/Users/shahzaibramzan/IdeaProjects/microservice-assignment/service1/src/Main.java",

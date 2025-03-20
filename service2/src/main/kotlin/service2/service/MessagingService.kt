@@ -12,6 +12,7 @@ class MessagingService(private val rabbitTemplate: RabbitTemplate) {
     fun receiveMessage(message: Message) {
         println("S2 received: $message")
         if (message.content == "ping") {
+            // Send pong back to S1
             val pongMessage = Message(content = "pong", sender = "Service-2")
             println("S2 sending: $pongMessage")
             rabbitTemplate.convertAndSend(
@@ -20,9 +21,11 @@ class MessagingService(private val rabbitTemplate: RabbitTemplate) {
                     pongMessage
             )
             println("S2 waiting for 10 seconds...")
+            //waiting 10 seconds
             Thread.sleep(10000)
             val pingMessage = Message(content = "ping", sender = "Service-2")
             println("S2 sending: $pingMessage")
+            // Publish ping on RabbitMQ
             rabbitTemplate.convertAndSend(
                     RabbitMQConfig.EXCHANGE,
                     RabbitMQConfig.ROUTING_KEY_S2_TO_S1,

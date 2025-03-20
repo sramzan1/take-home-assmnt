@@ -28,6 +28,7 @@ public class MessagingService {
     @RabbitListener(queues = RabbitMQConfig.QUEUE_S2_TO_S1)
     public void receiveMessage(Message message) {
         System.out.println("S1 received: " + message);
+        //sending pong response to s2
         if ("ping".equals(message.getContent())) {
             Message pongMessage = new Message("pong", "Service-1");
             System.out.println("S1 sending: " + pongMessage);
@@ -38,12 +39,14 @@ public class MessagingService {
             );
             try {
                 System.out.println("S1 waiting for 10 seconds...");
+                //wait 10 seconds
                 Thread.sleep(10000);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
             Message pingMessage = new Message("ping", "Service-1");
             System.out.println("S1 sending: " + pingMessage);
+           //publish new ping
             rabbitTemplate.convertAndSend(
                     RabbitMQConfig.EXCHANGE,
                     RabbitMQConfig.ROUTING_KEY_S1_TO_S2,
